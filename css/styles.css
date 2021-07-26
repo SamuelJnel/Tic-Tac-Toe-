@@ -1,0 +1,134 @@
+body {
+  background-color: #716f81;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.messsage-rest-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+.display-results {
+  font-size: 45px;
+  text-align: center;
+  padding-top: 10px;
+  width: 35%;
+}
+
+button {
+  padding: 13px;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #b97a95;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  width: 500px;
+  height: 500px;
+}
+
+.square {
+  width: 32%;
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6ae99;
+  font-family: "Indie Flower", cursive;
+  font-size: 90px;
+  font-weight: bolder;
+}
+
+.s6,
+.s7,
+.s8 {
+  border-top: 3px solid #b97a95;
+}
+
+.s0,
+.s1,
+.s2 {
+  border-bottom: 3px solid #b97a95;
+}
+
+.s0,
+.s3,
+.s6 {
+  border-right: 3px solid #b97a95;
+}
+
+.s2,
+.s5,
+.s8 {
+  border-left: 3px solid #b97a95;
+}
+
+button {
+  margin: 15px;
+}
+
+@media only screen and (max-width: 780px) {
+  .messsage-rest-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+  }
+
+  .display-results {
+    font-size: 45px;
+    text-align: center;
+    padding-top: 10px;
+    width: 75%;
+  }
+
+  button {
+    padding: 13px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #b97a95;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .game-container {
+    width: 275px;
+    height: 275px;
+  }
+  .display-results {
+    font-size: 35px;
+    text-align: center;
+    padding-top: 10px;
+    width: 75%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 11px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
