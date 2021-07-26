@@ -52,6 +52,7 @@ function gameBoardFunct(evt) {
   console.log(gameBoard);
 }
 
+
 function findWinner(el) {
   winCombinations.forEach(function (el, idx) {
     if (
@@ -61,16 +62,18 @@ function findWinner(el) {
     ) {
       winner = blankSpace[el[0]];
       displayResults.innerHTML = `${winner} has won!`;
-    } else if (
-      !blankSpace.includes(null) &&
-      blankSpace[el[0]] != blankSpace[el[1]] &&
-      blankSpace[el[0]] != blankSpace[el[2]]
-    ) {
-      displayResults.innerHTML = ` It's a tie!`;
+    } else if (!winner) {
+      if (
+        blankSpace[el[0]] &&
+        blankSpace[el[0]] != blankSpace[el[1]] &&
+        blankSpace[el[0]] != blankSpace[el[2]] &&
+        !blankSpace.includes(null)
+      ) {
+        displayResults.innerHTML = ` It's a tie!`;
+      }
     }
   });
 }
-
 function reSet() {
   turn = 1;
   gameBoard.fill(null);
