@@ -72,7 +72,6 @@ function findWinner() {
     }
   });
 }
-
 function reSet() {
   turn = 1;
   gameBoard.fill(null);
