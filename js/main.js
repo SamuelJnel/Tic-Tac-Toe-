@@ -49,7 +49,6 @@ function gameBoardFunct(evt) {
   blankSpace[boxClicked] = evt.target.innerText;
   findWinner();
   switchTurn();
-  console.log(gameBoard);
 }
 
 function findWinner() {
