@@ -52,7 +52,7 @@ function gameBoardFunct(evt) {
   console.log(gameBoard);
 }
 
-function findWinner(el) {
+function findWinner() {
   winCombinations.forEach(function (el, idx) {
     if (
       blankSpace[el[0]] &&
@@ -61,12 +61,15 @@ function findWinner(el) {
     ) {
       winner = blankSpace[el[0]];
       displayResults.innerHTML = `${winner} has won!`;
-    } else if (
-      !blankSpace.includes(null) &&
-      blankSpace[el[0]] != blankSpace[el[1]] &&
-      blankSpace[el[0]] != blankSpace[el[2]]
-    ) {
-      displayResults.innerHTML = ` It's a tie!`;
+    } else if (!winner) {
+      if (
+        blankSpace[el[0]] &&
+        blankSpace[el[0]] != blankSpace[el[1]] &&
+        blankSpace[el[0]] != blankSpace[el[2]] &&
+        !blankSpace.includes(null)
+      ) {
+        displayResults.innerHTML = ` It's a tie!`;
+      }
     }
   });
 }
@@ -74,11 +77,7 @@ function findWinner(el) {
 function reSet() {
   turn = 1;
   gameBoard.fill(null);
-  console.log(gameBoard);
-  console.log(blankSpace);
   playSquares.forEach((el) => (el.innerHTML = " "));
   displayResults.innerHTML = `Who will win?`;
   winner = null;
 }
-
-//(!blankSpace.includes(null) && turn == 1)
