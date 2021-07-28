@@ -27,9 +27,8 @@ playSquares.forEach((el) => el.addEventListener("click", gameBoardFunct));
 
 reSetBtn.addEventListener("click", reSet);
 
-function switchTurn(el) {
+function switchTurn() {
   turn == 1 ? (turn = -1) : (turn = 1);
-  // if turn 1 is true switch to trun -1 if false switch to turn 1.
 }
 
 function gameBoardFunct(evt) {
@@ -72,6 +71,7 @@ function findWinner() {
     }
   });
 }
+
 function reSet() {
   turn = 1;
   gameBoard.fill(null);
